@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="auth.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Üyelik İşlemleri</title>
+</head>
+<body>
+    <div class="auth">
+        <div class="row" style="margin: 0;">
+            <div class="col-md-6" style="padding: 0 0 0 0; margin: 0 0 0 0;">
+                <div class="background-item" style="text-align: center; font-size: 20px;">
+                    <p style="color: rgb(243, 243, 243); font-style: italic;">“İyiler kaybetmez ama kaybedilir.”</p>  
+                    <h2 style="color: rgb(243, 243, 243);">Peyami Safa</h2>
+                </div>
+                <button id="registerbutton" class="register-button btn-block" onclick="ButtonEvent()"><p style="margin: 0;">Kayıt Ol<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg></p></button>
+                <div class="register">
+                    <div class="register-title">
+                        <h1>Haydi Sen De Aramıza Katıl!</h1>
+                    </div>
+                    <div class="register-user-name-mail">
+                        <div class="register-user-name">
+                            <h3>Kullaıcı Adı</h3>
+                            <input type="text" placeholder="Kullanıcı Adı">
+                        </div>
+                        <div class="register-user-email">
+                            <h3>Kullanıcı Epostası</h3>
+                            <input type="text" placeholder="E-posta">
+                        </div>
+                    </div>
+                    <div class="register-password">
+                        <h3>Kullanıcı Şifresi</h3>
+                        <div class="register-password-inputs">
+                            <input type="password" placeholder="Şifre">
+                            <input type="password" placeholder="Şifre Tekrar">
+                        </div>
+                    </div>
+                    <div class="date-of-birth">
+                        <h3>Doğum Tarihinizi Seçiniz</h3>
+                        <div class="selectors">
+                            <select class="day">
+                                <option value="">01</option>
+                                <option value="">02</option>
+                                <option value="">03</option>
+                                <option value="">04</option>
+                                <option value="">05</option>
+                                <option value="">06</option>
+                                <option value="">07</option>
+                                <option value="">08</option>
+                                <option value="">09</option>
+                                <option value="">10</option>
+                                <option value="">11</option>
+                                <option value="">12</option>
+                                <option value="">13</option>
+                                <option value="">14</option>
+                                <option value="">15</option>
+                                <option value="">16</option>
+                                <option value="">17</option>
+                                <option value="">18</option>
+                                <option value="">19</option>
+                                <option value="">20</option>
+                                <option value="">21</option>
+                                <option value="">22</option>
+                                <option value="">23</option>
+                                <option value="">24</option>
+                                <option value="">25</option>
+                                <option value="">26</option>
+                                <option value="">27</option>
+                                <option value="">28</option>
+                                <option value="">29</option>
+                                <option value="">30</option>
+                            </select>
+                            <select class="month">
+                                <option value="">Ocak</option>
+                                <option value="">Şubat</option>
+                                <option value="">Mart</option>
+                                <option value="">Nisan</option>
+                                <option value="">Mayıs</option>
+                                <option value="">Haziran</option>
+                                <option value="">Temmuz</option>
+                                <option value="">Ağustos</option>
+                                <option value="">Eylül</option>
+                                <option value="">Ekim</option>
+                                <option value="">Kasım</option>
+                                <option value="">Aralık</option>
+                            </select>
+                            <select class="year">
+                                <option>2007</option>
+                                <option>2006</option>
+                                <option>2005</option>
+                                <option>2004</option>
+                                <option>2003</option>
+                                <option>2002</option>
+                                <option>2001</option>
+                                <option>2000</option>
+                                <option>1999</option>
+                                <option>1998</option>
+                                <option>1997</option>
+                                <option>1996</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="province-selection">
+                        <h3>İkametkah Seçiniz</h3>
+                        <select>
+                            <option value="">Lütfen Bulunduğunuz İli Seçin</option>
+                            <option value="">Ankara</option>
+                            <option value="">Adana</option>
+                            <option value="">İzmir</option>
+                            <option value="">İstanbul</option>
+                            <option value="">Edirne</option>
+                            <option value="">Tekirdağ</option>
+                            <option value="">Rize</option>
+                        </select>
+                    </div>
+                    <label class="i-read-i-accept">
+                        <input type="checkbox">
+                        <h3><a href="#">Kullanıcı Sözleşmesini </a>Okudum Kabul Ediyorum</h3>
+                    </label>
+                    <div class="register-btn">
+                        <ul>
+                            <li>
+                                <a href="#"><p>Kayıt Ol</p><i class="fas fa-arrow-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-platform">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>       
+            </div>
+
+            <div class="col-md-6" style="padding: 0 0 0 0; margin: 0 0 0 0;">
+                <div class="background-item" style="text-align: center; font-size: 20px;">
+                    <p style="color: rgb(243, 243, 243); font-style: italic;">“İnsanı farklı yapan, affettikleri, güçlü yapan sabrettikleri, kendisi yapan ise vazgeçtikleridir.”</p>  
+                    <h2 style="color: rgb(243, 243, 243);">Anonim</h2>
+                </div>
+                <button id="loginbutton" class="login-button active btn-block" onclick="ButtonEvent()"><p style="margin: 0;">Giriş Yap<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg></p></button>
+                <div class="login">
+                    <div class="login-title">
+                        <div class="image-logo">
+                            <img class="login-image-logo" src="https://via.placeholder.com/150" alt="">
+                        </div>
+                        <h1>Ücretsiz, güvenilir, avantajlı bir sisteme giriş yapmak istemez misin ?</h1>
+                    </div>
+                    <div class="login-selection">
+                        <ul>
+                            <li>
+                                <a href="#">Öğrenci</a>
+                            </li>
+                            <li>
+                                <a href="#">Öğretmen</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-users-info">
+                        <div class="login-user-email">
+                            <h3>E-posta</h3>
+                            <input type="text" placeholder="E-posta" style="background: #fff;">
+                        </div>
+                        <div class="login-password">
+                            <h3>Şifre</h3>
+                            <input type="password" placeholder="Şifre">
+                        </div>
+                    </div>
+                    <!--
+                    <label class="keep-it-open">
+                        <input type="checkbox">
+                        <h3>Oturumumu Açık Tut.</h3>
+                    </label>
+                    -->
+                    <div class="login-forgotpassword-buttons">
+                        <ul>
+                            <li>
+                                <a class="to-login" href="#">Giriş Yap<i class="fas fa-arrow-right"></i></a>
+                            </li>
+                            <li>
+                                <a class="to-register" href="#">Şifremi Unuttum.</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social-platform">
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+            function ButtonEvent(){
+                if($('#loginbutton').hasClass('active')){
+                    $('#loginbutton').removeClass('active');
+                    $('#registerbutton').addClass('active');
+                }else{
+                    $('#loginbutton').addClass('active');
+                    if($('#registerbutton').hasClass('active')){
+                        $('#registerbutton').removeClass('active');
+                    }
+                }
+            }
+    </script>
+
+
+</body>
+</html>

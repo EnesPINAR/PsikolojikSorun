@@ -1,0 +1,742 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+.clear {
+    clear: both;
+}
+html {
+    height: 100%;
+}
+
+
+/*search*/
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d3d3d3;
+    border-radius: 14px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9c9c9c;
+    border-radius: 14px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(53, 53, 53);
+  }
+/*endsearch*/
+
+.auth {
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+.col-md-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(35deg, rgba(66,75,83,1) 15%, rgba(23,26,29,1) 15%, rgba(23,26,29,1) 85%, rgba(66,75,83,1) 85%);
+}
+
+.col-md-6 button.register-button {
+    z-index: 9;
+    /*box-shadow: 0px 15px 20px -15px #58D7C8; */
+}
+
+.col-md-6 button.login-button {
+    z-index: 10;
+    /*box-shadow: 0px 15px 20px -15px #58D7C8; */
+}
+
+.col-md-6 button.register-button, 
+.col-md-6 button.login-button {
+    background: #343a40;
+    padding: 10px 15px 10px 15px;
+    color: white;
+    transition: 500ms all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+
+.col-md-6 button.register-button p, 
+.col-md-6 button.login-button p {
+    display: flex;
+    align-items: center;
+}
+
+.col-md-6 button.register-button:hover p, 
+.col-md-6 button.login-button:hover p {
+    transition: 200ms all;
+    transform: translateY(2px);
+}
+
+.col-md-6 .register-button.active + .register {
+    top: 0;
+}
+
+.col-md-6 .register-button.active svg {
+    transition: 300ms all;
+    transform: rotate(180deg);
+}
+
+.col-md-6 .register-button.active {
+    top: calc(100% - 45px);
+    z-index: 91;
+    border-right: 1.5px solid #58D7C8;
+}
+
+.col-md-6 .register-button.active:hover p {
+    transition: 200ms all;
+    transform: translateY(-2px);
+}
+
+.col-md-6 button.register-button svg, 
+.col-md-6 button.login-button svg {
+    margin-left: 5px;
+}
+
+.col-md-6 .login-button.active + .login {
+    top: 0;
+}
+
+.col-md-6 .login-button.active {
+    top: calc(100% - 45px);
+    z-index: 91;
+    border-left: 1.5px solid #58D7C8;
+}
+
+.col-md-6 .login-button.active svg {
+    transition: 300ms all;
+    transform: rotate(180deg);
+}
+
+.col-md-6 .login-button.active:hover p {
+    transition: 200ms all;
+    transform: translateY(-2px);
+}
+
+.login {
+    position: absolute;
+    background: #424242;
+    top: -100%;
+    transition: 500ms;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    z-index: 81;
+    padding-bottom: 45px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-left: 1.5px solid #58D7C8;
+}
+
+.login input {
+    margin-top: 15px;
+    border: 1.5px solid #134ea5;
+    width: 193px;
+}
+
+.login .login-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.login .login-title .image-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+
+.login h1 {
+    color: white;
+    width: 60%;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.login .login-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login .login-users-info {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.login .login-selection ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.login .login-selection ul li {
+    background: #343a3e; /*rgb(0, 89, 255);*/
+    border-radius: 6px;
+    transition: 300ms all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 193px;
+}
+
+.login .login-selection ul li:hover {
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.5);
+}
+
+.login .login-selection ul li a {
+    color: rgb(231, 231, 231);
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .login-selection ul li a:hover {
+    text-decoration: none;
+}
+
+.login .login-selection ul li:not(:last-child) {
+    margin-right: 150px;
+}
+
+.login .login-user-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 150px 10px 0 ;
+}
+
+.login .login-user-email h3 {
+    margin: 10px 0 20px 0;
+    color: white;
+}
+
+.login .login-user-email input {
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+}
+
+.login .login-password {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0 10px 0 ;
+}
+
+.login .login-password h3 {
+    margin: 10px 0 20px 0;
+    color: white;
+}
+
+.login .login-password input {
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+}
+
+.login .keep-it-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 19%;
+}
+
+.login .keep-it-open input {
+    margin-right: 15px;
+    margin-top: 0;
+    height: 16px;
+    width: 16px;
+    display: block;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1px solid #58D7C8;
+}
+
+.login .keep-it-open h3 {
+    margin: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.login .login-forgotpassword-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.login .login-forgotpassword-buttons ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+}
+
+.login .login-forgotpassword-buttons ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 193px;
+    border-radius: 6px;
+    transition: 200ms all;
+}
+
+.login .login-forgotpassword-buttons ul li:nth-child(1) {
+    margin-right: 15px;
+}
+
+.login .login-forgotpassword-buttons ul li:nth-child(2) {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    border-radius: 6px;
+    transition: 200ms all;
+}
+
+.login .login-forgotpassword-buttons ul li a.to-login {
+    color: #58D7C8;
+    transition: 200ms all;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5%;
+}
+
+.login .login-forgotpassword-buttons ul li a.to-login i {
+    margin-left: 10px;
+}
+
+.login .login-forgotpassword-buttons ul li a.to-register {
+    color: #58D7C8;
+    transition: 200ms all;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5%;
+}
+
+.login .login-forgotpassword-buttons ul li a:hover {
+    transform: translateY(-4px);
+}
+
+.login .social-platform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+.login .social-platform ul {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.login .social-platform ul li {
+    margin-right: 2%;
+    margin-left: 3%;
+}
+
+
+.login .social-platform ul li a i {
+    font-size: 30px;
+    transition: 200ms all;
+}
+
+.login .social-platform ul li a i:hover {
+    transform: translateY(-2px);
+}
+
+.login .social-platform ul li a i.fab.fa-instagram-square {
+    color: #d6249f;
+}
+
+.login .social-platform ul li a i.fab.fa-facebook-square {
+    color: #4267B2; 
+}
+
+.login .social-platform ul li a i.fab.fa-twitter-square {
+    color: #1DA1F2; 
+}
+
+
+/*Register*/
+
+.register {
+    position: absolute;
+    background: #424242;
+    top: -100%;
+    transition: 500ms;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    z-index: 80;
+    padding-bottom: 45px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-right: 1.5px solid #58D7C8;
+}
+
+.register .register-title {
+    text-align: center;
+    color: white;
+}
+
+.register h3 {
+    margin: 0;
+}
+
+.register .register-user-name-mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .register-user-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.register input[type=text] {
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+}
+
+.register input[type=password] {
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+}
+
+.register input[type=password]:first-of-type {
+    margin-right: 15px;
+}
+
+.register input {
+    margin-top: 15px;
+    border: 1.5px solid #58D7C8;
+}
+
+.register .register-user-name h3 {
+    color: white;
+}
+
+.register .register-user-email {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register .register-user-email h3 {
+    color: white;
+}
+
+.register .register-password {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register .register-password h3 {
+    color: white;
+}
+
+.register .date-of-birth {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register .date-of-birth h3 {
+    color: white;
+}
+
+.register .date-of-birth .selectors {
+    margin-top: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.register .date-of-birth .selectors select {
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1.5px solid #58D7C8;
+    box-sizing: border-box;
+    transition: 300ms all;
+}
+
+.register .date-of-birth .selectors select:hover,
+.register .date-of-birth .selectors select:focus {
+    background: black;
+    color: white;
+}
+
+.register .date-of-birth .selectors select:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.register .province-selection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register .province-selection h3 {
+    color: white;
+}
+
+.register .province-selection select {
+    margin-top: 10px;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid #58D7C8;
+}
+
+.register .province-selection select:hover,
+.register .province-selection select:focus {
+    background: black;
+    color: white;
+}
+
+.register .i-read-i-accept {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.register .i-read-i-accept h3 {
+    color: white;
+}
+
+.register .i-read-i-accept h3 a {
+    margin-right: 10px;
+}
+
+.register .i-read-i-accept input {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 15px;
+}
+
+.register .register-btn {
+    width: 100%;
+}
+
+.register .register-btn ul {
+    width: 100%;
+    margin: 0;
+}
+
+.register .register-btn ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .register-btn ul li a {
+    font-size: 24px;
+    color: #58D7C8;
+    transition: 200ms all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register .register-btn ul li a:hover {
+    transform: translateY(-4px);
+    text-decoration: none;
+}
+
+.register .register-btn ul li a p {
+    margin: 0;
+}
+
+.register .register-btn ul li a i {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.register .social-platform {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 10%;
+}
+
+.register .social-platform ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    margin: 0;
+}
+
+.register .social-platform ul li {
+    margin-right: 2%;
+    margin-left: 3%;   
+}
+
+.register .social-platform ul li a {
+    height: 100%;
+    width: 100%;
+}
+
+.register .social-platform ul li a i {
+    font-size: 30px;
+    transition: 200ms all;
+}
+
+.register .social-platform ul li a i:hover {
+    transform: translateY(-2px);
+}
+
+.register .social-platform ul li a i.fab.fa-instagram-square {
+    color: #d6249f;
+}
+
+.register .social-platform ul li a i.fab.fa-facebook-square {
+    color: #4267B2; 
+}
+
+.register .social-platform ul li a i.fab.fa-twitter-square {
+    color: #1DA1F2; 
+}

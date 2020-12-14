@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link id="color-mode-css" rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasayfa</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css"  crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="header">
+
+        <div class="logo">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/0/225.svg" alt="">
+        </div>
+
+        <div class="giris-kayit">
+            <ul>
+                <li>
+                    <a href="../auth/auth.html" class="log in">Giriş yap/Kayıt Ol</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-menu">
+            <ul>
+                <li class="ar">
+                    <a href="../index/index.html">Anasayfa</a>
+                </li>
+                <li class="ar">
+                    <a href="../blog/blog.html">Blog</a>
+                </li>
+                <li class="ar">
+                    <a href="#">Hakkımızda</a>
+                </li>
+                <li class="ar">
+                    <a href="#">İletişim</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mobil-header-menu">
+            <ul>
+                <li>
+                    <i class="fas fa-home"></i>
+                </li>
+                <li>
+                    <i class="fas fa-book"></i>
+                </li>
+                <li>
+                    <i class="fas fa-address-card"></i>
+                </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="arama">
+            <input type="text" placeholder="Ara..">
+            <div class="arama-icon">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+
+        <div class="arama-mobil-icon">
+            <i class="fas fa-search"></i>
+        </div>
+
+        <label class="mode-control">
+            <input type="checkbox" id="color-mode-control">
+            <span class="acik color-mode" id="color-mode-white">Açık mod</span>
+            <span class="kapali color-mode" id="color-mode-black">Koyu mod</span>
+        </label>
+    </div>
+
+    <div class="banner">
+        <div class="banner-texts">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>hey Merhaba sende ücretsiz bir şekilde psikolojik danışmanlık ister misiniz :)</p>
+        </div>
+
+        <div class="logins">
+            <div class="giris-kayit">
+                <ul>
+                    <li>
+                        <a href="#" class="log in">Giriş Yap</a>
+                    </li>
+                    <li>
+                        <a href="#" class="log up">Kayıt Ol</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="random-student">
+        <h2>Öğrencilerimizden Bazıları:</h2>
+        <div class="border-hr"></div>
+        <ul>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFufGVufDB8fDB8&auto=format&fit=crop&w=500&q=60" alt="">
+                    <h1 class="student-name">Ali</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Berke</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Hüseyin</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Ali</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Çağrı</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li>
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Mehmet</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="../profile/profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Kamil</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="../profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Fazıl</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="../profile.html">
+                    <img src="../img/profile.png" alt="">
+                    <h1 class="student-name">Ali</h1>
+                    <div class="score"><i class="fas fa-star"></i>4.5</div>
+                </a>
+            </li>
+        </ul>
+        <div class="more">
+            <a href="#">
+                <i class="fas fa-plus-circle"></i>
+                <h5>Daha fazla göster...</h5>
+            </a>
+        </div>
+    </div>
+
+    <div class="tips">
+        <div class="image one">
+            <img src="../img/square.png" alt="">
+        </div>
+        <div class="tip one">
+            <h1>En çekici psikoloji uygulaması!</h1>
+            <div class="border-hr"></div>
+            <p>Kullanmaya başlamak için önce bir hesabın olmalı.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+        </div>
+        <div class="tip two">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <div class="border-hr"></div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+        </div>
+        <div class="image two">
+            <img src="../img/square.png" alt="">
+        </div>
+        <div class="image three">
+            <img src="../img/square.png" alt="">
+        </div>
+        <div class="tip three">
+            <h1>Lorem ipsum dolor sit.</h1>
+            <div class="border-hr"></div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, neque!</p>
+        </div>
+    </div>
+
+    <div class="random-student" id="school">
+        <h2>Üye Okullarımızdan Bazıları:</h2>
+        <div class="border-hr"></div>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Sabancı</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Sabancı</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Sabancı</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Sabancı</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Namık Kemal</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Koç</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>İstanbul Teknik</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Samsun</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+            <li id="mobile-cart">
+                <a href="#">
+                    <img src="https://teachingconf.sabanciuniv.edu/img/su-logo-framed.png" alt="">
+                    <h1>Bahçeşehir</h1>
+                    <h1>Üniversitesi</h1>
+                </a>
+            </li>
+        </ul>
+        <div class="more">
+            <a href="#">
+                <i class="fas fa-plus-circle"></i>
+                <h5>Daha fazla göster...</h5>
+            </a>
+        </div>
+    </div>
+
+    <div class="altbar">
+        <div class="altbar-logo">
+            <img src="https://www.flaticon.com/svg/static/icons/svg/0/225.svg" alt="">
+        </div>
+        <div class="altbar-menu">
+            <h1 style='font-size: 20px; color: rgb(148, 148, 148);'>Sekmeler</h1>
+            <ul>
+                <li>
+                    <a href="#">Anasayfa</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Hakkımızda</a>
+                </li>
+                <li>
+                    <a href="#">İletişim</a>
+                </li>
+            </ul>
+        </div>
+        <div class="ozlusoz">
+            <h1>“Başarısız olmak zordur, ancak başaramaya çalışmamış olmak daha da zordur.”</h1>
+            <p>-Theodore Roosevelt</p>
+        </div>
+        <div class="altbar-menu2">
+            <div class="altbar-iletisim">
+                <h1 style="color: rgb(148, 148, 148)">İletişim</h1>
+                <h2>psikolog@psikoloji.com</h2>
+                <div class="social">
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">SSS</a>
+                </li>
+            </ul>
+        </div>
+        <h3>Tüm hakları saklıdır.</h3>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+
+        $(function(){
+
+            var scroll = $(document).scrollTop();
+            var navHeight = $('.header').outerHeight();
+
+            $(window).scroll(function(){
+                var scrolled = $(document).scrollTop();
+
+                if(scrolled > navHeight) {
+                    $('.header').addClass('animate');
+                }else{
+                    $('.header').removeClass('animate');
+                }
+
+                if(scrolled > scroll){
+                    $('.header').removeClass('sticky');
+                }else{
+                    $('.header').addClass('sticky');
+                }
+
+                scroll = $(document).scrollTop();
+            });
+
+        });
+
+
+
+    </script>
+</body>
+</html>
