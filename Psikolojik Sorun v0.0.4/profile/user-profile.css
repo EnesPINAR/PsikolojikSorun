@@ -1,0 +1,898 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, select, textarea, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+img {
+    border: 0;
+}
+:focus {
+    outline: 0;
+}
+.clear {
+    clear: both;
+}
+html {
+    height: 100%;
+}
+
+
+/*search*/
+
+/*SCROLLBAR*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d3d3d3;
+    border-radius: 14px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 14px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(53, 53, 53);
+  }
+/*endsearch*/
+
+.header {
+    height: 60px;
+    width: 100%;
+    background: #2E3A41;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #58D7C8;
+    -webkit-box-shadow: 0px 26px 30px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 26px 30px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 26px 30px 0px rgba(50, 50, 50, 0.75);
+    position: fixed;
+    top: 0;
+    z-index: 900;
+    transition: top .6s;
+}
+
+.header.animate {
+    top: -71px;
+}
+
+.header.sticky {
+    top: 0;
+    z-index: 900;
+}
+
+.logo {
+    height: 50px;
+    width: 5%;
+}
+
+.header .logo img {
+    height: 100%;
+    width: 100%;
+    transition: 400ms all;
+    cursor: pointer;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header .header-menu {
+    display: flex;
+    width: 60%;
+    margin-right: 0.5%;
+}
+
+.header .header-menu ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 0;
+}
+
+.header-menu ul li {
+    display: inline-block;
+    align-items: flex-start;
+    margin-right: 0.5%;
+}
+
+.header-menu ul li a {
+    color: #58D7C8;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    transition: 800ms;
+    padding-bottom: 0;
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-menu ul li a::after {
+    content:'';
+    position:absolute;
+    width:100%;
+    transform:scaleX(0);
+    height:0.5px;
+    bottom:0;
+    left: 0;
+    background-color:#58D7C8;
+    transform-origin:bottom right;
+    transition:transform 0.30s ease-out;
+}
+
+.header .header-menu ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header .giris-kayit {
+    border-radius: 14px;
+    text-align: center;
+    display: table;
+    flex-direction: column;
+    margin-left: 1.5%;
+    width: 15%;
+}
+
+.header .giris-kayit ul {
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.header .giris-kayit ul li {
+    display: inline-block;
+    display: flex;
+    margin-left: 15px;
+}
+
+
+
+.header .giris-kayit ul li a.in {
+    border:  #adc2ce solid 2px;
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px;
+    color: #adc2ce;
+    transition: 300ms;
+    background-color: #2E3A41;
+    font-size: 16px;
+}
+
+.header .giris-kayit ul li a.in:hover {
+    border:  #adc2ce solid 2px;
+    background: #adc2ce;
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px;
+    color: #2E3A41;
+    box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+.header .giris-kayit ul li a.up {
+    border:  #adc2ce solid 2px;
+    background: #adc2ce;
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px;
+    color: #2E3A41;
+    transition: 300ms;
+}
+
+.header .giris-kayit ul li a.up:hover {
+    border:  #adc2ce solid 2px;
+    border-radius: 5px;
+    padding: 6px 6px 6px 6px;
+    color: #adc2ce;
+    transition: 300ms;
+    background-color: #2E3A41;
+    box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.65);
+    transform: scale(1.05);
+}
+
+/*KOYUACİK*/
+.mode-control {
+    width: 8%;
+    height: 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #58D7C8 solid 1.5px;
+    cursor: pointer;
+    border-radius: 14px;
+    color: whitesmoke;
+    background: rgb(58, 58, 58);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.mode-control span:nth-of-type(2) {
+    display: none;
+}
+
+.mode-control input {
+    display: none;
+}
+
+.mode-control input:checked + span {
+    display: none;
+}
+
+.mode-control input:checked + span + span {
+    display: inline-block;
+}
+
+
+/*KOYUACİKEND*/
+
+/*ARAMA*/
+.arama {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.arama .arama-icon {
+    line-height: 16px;
+    width: 12%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58, 58, 58);
+    color: rgb(240, 240, 240);
+    border-radius: 0 14px 14px 0;
+    border-left: #58D7C8 1.5px solid;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-top: #58D7C8 solid 1.5px;
+    border-right: #58D7C8 solid 1.5px;
+    border-bottom: #58D7C8 solid 1.5px;
+}
+
+.arama input {
+    width: 50%;
+    height: 30px;
+    transition: 200ms width;
+    border-radius: 14px 0 0 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    box-sizing: border-box;
+    border-top: #58D7C8 solid 1.5px;
+    border-left: #58D7C8 solid 1.5px;
+    border-bottom: #58D7C8 solid 1.5px;
+    color: rgb(228, 228, 228); /*#03b4db*/
+    background: rgb(58, 58, 58);
+}
+
+.arama input::placeholder {
+    color: rgb(240, 240, 240);
+}
+
+.arama input:focus {
+    width: 70%;
+}
+.arama-mobil-icon {
+    line-height: 16px;
+    width: 5%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(58, 58, 58);
+    color: rgb(240, 240, 240);
+    border-radius: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: #58D7C8 solid 1.5px;
+    display: none;
+    margin-right: 1.5%;
+}
+/*ARAMAEND*/
+
+
+
+/*PROFİL*/
+
+.profil-tasiyici {
+    background: #111518;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5% 10% 5% 10%;
+    box-sizing: border-box;
+}
+.profil {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 1px solid #58D7C8;
+    border-radius: 14px;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(88, 215, 200,0.5);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(88, 215, 200,0.5);
+    box-shadow:  0px 0px 15px 0px rgba(88, 215, 200,0.5);
+}
+.profil-tasiyici .bos {
+    max-height: 115px;
+    min-height: 15%;
+    width: 10%;
+    border-radius: 14px 0 0 0;
+    background: #2E3A41;
+    box-sizing: border-box;
+    border-right: 1px solid #58D7C8;
+    border-bottom: 1px solid #58D7C8;
+}
+.profil-tasiyici .ust-profil {
+    width: 90%;
+    max-height: 115px;
+    min-height: 15%;
+    padding: 0 5% 0 5%;
+    box-sizing: border-box;
+    background: #2E3A41;
+    border-radius: 0 14px 0 0;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    border-bottom: 1px solid #58D7C8;
+}
+.profil-tasiyici .ust-profil h2 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.profil-tasiyici .ust-profil h1 {
+    margin-top: 5px;
+}
+.profil-tasiyici .ust-profil p {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.profil-tasiyici .ust-profil .profil-foto {
+    width: 15%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profil-tasiyici .ust-profil .profil-foto img {
+    border-radius: 50%;
+    height: 80%;
+}
+.profil-tasiyici .ust-profil .profil-isim {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+    min-width: 35%;
+    max-width: 40%;
+}
+.profil-tasiyici .ust-profil .profil-isim h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.50);
+    line-height: 20px;
+    min-width: 40%;
+    max-width: 40%;
+
+}
+.profil-tasiyici .ust-profil .profil-uni {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+    min-width: 35%;
+    max-width: 40%;
+}
+.profil-tasiyici .ust-profil .profil-uni h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.50);
+    line-height: 20px;
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.profil-tasiyici .ust-profil div:not(:first-of-type) {
+    display: flex;
+    flex-direction: column!important;
+    align-items: center!important;
+    justify-content: space-around!important;
+    padding: 5% 0 5% 0;
+}
+
+.profil-tasiyici .ust-profil .profil-puan {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.profil-tasiyici .ust-profil .profil-puan h2 {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.profil-tasiyici .ust-profil .profil-puan p {
+    color: white;
+}
+.profil-tasiyici .ust-profil .profil-puan i {
+    color: yellow;
+    margin-left: 5px;
+}
+.profil-tasiyici .yan-profil {
+    width: 10%;
+    min-height: 85%;
+    border-radius: 0 0 0 14px;
+    display: flex;
+    flex-direction: column;
+    background: #2E3A41;
+    box-sizing: border-box;
+    border-right: 1px solid #58D7C8;
+}
+.profil-tasiyici .yan-profil ul {
+    width: 100%;
+    height: 100%;
+    max-height: 310px;  
+    box-sizing: border-box;
+    padding: 15% 0 15% 0;
+}
+.profil-tasiyici .yan-profil ul li {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profil-tasiyici .yan-profil p {
+    opacity: 1;
+    margin: 0;
+}
+
+.profil-tasiyici .yan-profil ul li a {
+    font-size: 16px;
+    color: white;
+    transition: 200ms all;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profil-tasiyici .yan-profil ul li a i{
+    font-size: 16px;
+    color: white;
+    transition: 200ms all;
+    margin-right: 5%;
+}
+.profil-tasiyici .yan-profil ul li a:hover{
+    color: #58D7C8;
+    text-decoration: none;
+}
+.profil-tasiyici .yan-profil ul li a:hover i{
+    color: #58D7C8;
+}
+.profil-tasiyici .yan-profil ul li a p {
+    font-size: 18px;
+}
+.profil-tasiyici .blog-profil {
+    border-radius: 0 0 14px 0;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background: #2E3A41;
+    box-sizing: border-box;
+    padding: 5% 10% 5% 10%;
+}
+.profil-tasiyici .blog-profil h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+}
+.profil-tasiyici .blog-profil h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.profil-tasiyici .blog-profil .profil-bloglar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 430px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 5% 0 5% 0;
+    padding: 2% 0 2% 0;
+    flex-wrap: wrap;
+}
+.profil-tasiyici .blog-profil .profil-bloglar::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+  }
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    box-sizing: border-box;
+    padding: 2% 0 2% 0;
+    border: 1px solid #58D7C8;
+    border-radius: 14px;
+    transition: 200ms all;
+    background: rgb(23, 26, 29);
+}
+
+.post-explanation {
+    display: flex;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.50);
+    align-items: center;
+    width: 100%;
+}
+.post-explanation div {
+    width: 33%;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-explanation div i {
+    margin-right: 10px;
+}
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu:nth-child(1),
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu:nth-child(3) {
+    margin-right: 10px;
+}
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu:hover {
+    transform: scale(1.01);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(88, 215, 200,0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(88, 215, 200,0.5);
+    box-shadow:  0px 0px 10px 0px rgba(88, 215, 200,0.5);
+    text-decoration: none;
+}
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu {
+    margin-bottom: 10px;
+}
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu img {
+    height: 90%;
+    width: 90%;
+    margin-bottom: 5px;
+}
+.profil-tasiyici .blog-profil .profil-bloglar .profil-blogu h3 {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    height: 10%;
+    width: 90%;
+}
+
+/*HEADERMOBİLMENÜ*/
+.header .header-menu .mobil-bars {
+    display: none;
+}
+.mobil-header-menu {
+    display: none;
+}
+.mobil-header-menu ul {
+    display: flex;
+}
+.mobil-header-menu ul li {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MOBİL*/
+@media only screen and (max-width:1620px) {
+    .profil-tasiyici .yan-profil ul li a p {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width:1481px) {
+    .header .giris-kayit {
+        width: 25%;
+    }
+    .profil-tasiyici .yan-profil ul li a p {
+        display: none;
+    }
+}
+@media only screen and (max-width:1227px) {
+    .mode-control {
+        width: 10%;
+    }
+    .header .arama {
+        display: none;
+    }
+    .header .arama-mobil-icon {
+        display: flex;
+    }
+}
+@media only screen and (max-width:1200px){
+    .header .mode-control {
+        width: 12.8%;
+    }
+
+
+}
+@media only screen and (max-width:1029px){
+    .header .giris-kayit {
+        width: 27%;
+    }
+}
+@media only screen and (min-height:1024px) {
+    .profile-card .profile-hakkinda h2 {
+       font-size: 20px;
+    }
+}
+@media only screen and (min-width:865px) {
+    body {
+        background: #343a40;
+    }
+    .profile-mobile {
+        display: none;
+    }
+    .profile {
+        display: visible;
+    }
+    .profile-card {
+        padding-bottom: 3%;
+    }
+}
+@media only screen and (max-width:864px){
+    body {
+        background: #495057;
+    }
+    .header {
+        display: none;
+    }
+    .header .header-menu {
+        display: none;
+    }
+    .header .header-menu li.ar {
+        display: none;
+    }
+    .header .header-menu .mobil-bars {
+        display: block;
+    }
+    .logo {
+        display: none;
+    }
+    .mobil-header-menu {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: #111518;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 60px;
+        background: #2E3A41;
+        padding: 10px 20px 10px 20px;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+        z-index: 900;
+    }
+    .mobil-header-menu ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .mobil-header-menu ul li i{
+        cursor: pointer;
+    }
+    .arama {
+        display: none;
+    }
+    .header .arama-mobil-icon {
+        display: none;
+    }
+    .mode-control {
+        display: none;
+    }
+    .header .giris-kayit {
+        display: none;
+    }
+    .profile {
+        display: none;
+    }
+    .profile-mobile {
+        display: flex;
+        padding-bottom: calc(3% + 60px);
+    }
+    .profile-mobile .profile-card {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .profile-mobile .profile-card span.user-profile-detail {
+        text-align: center;
+        font-size: 35px;
+    }
+    .profil-tasiyici {
+        height: 100%;
+        margin-bottom: 60px;
+        padding: 0;
+    }
+    .profil-tasiyici .blog-profil .profil-bloglar .profil-blogu {
+        width: 80%;
+        padding: 5% 0 5% 0;
+        margin-right: 0;
+    }
+    .profil-tasiyici .blog-profil .profil-bloglar .profil-blogu:nth-child(1),
+    .profil-tasiyici .blog-profil .profil-bloglar .profil-blogu:nth-child(3) {
+        margin-right: 0;
+}
+    .profil-tasiyici .blog-profil .profil-bloglar .profil-blogu h3 {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .profil-tasiyici .yan-profil ul li a p {
+        display: none;
+    }
+    .profil-tasiyici .ust-profil .profil-foto img {
+        height: 40%;
+    }
+    .profil-tasiyici .ust-profil h1 {
+        font-size: 14px;
+    }
+    .profil-tasiyici .ust-profil .profil-puan p {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profil-tasiyici .ust-profil .profil-isim h2 {
+        font-size: 16px;
+    }
+    .profil-tasiyici .ust-profil .profil-uni h2 {
+        font-size: 16px;
+    }
+    .profil-tasiyici .ust-profil .profil-puan h2 {
+        font-size: 16px;
+    }
+    .post-explanation div {
+        font-size: 12px;
+        flex-direction: column;
+    }
+    .profil-tasiyici .bos,
+    .profil-tasiyici .ust-profil,
+    .profil-tasiyici .yan-profil,
+    .profil-tasiyici .blog-profil {
+        border-radius: 0;
+    }
+    .profil {
+        border: 0;
+    }
+    .profil-tasiyici .ust-profil p {
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical; 
+        overflow:hidden;
+    }
+    .profil-tasiyici .ust-profil h2 {
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profil-tasiyici .ust-profil {
+        padding: 0 10px 0 10px;
+    }
+    .profil-tasiyici .ust-profil .profil-isim {
+        min-width: 0;
+    }
+    .profil-tasiyici .ust-profil .profil-uni {
+        max-width: 45%;
+    }
+}
